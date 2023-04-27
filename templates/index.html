@@ -1,0 +1,32 @@
+<html>
+
+<head>
+
+</head>
+<link href="/static/style.css" rel="stylesheet">
+
+
+<body>
+    <video class='video' muted='true' loop="true" autoplay='true' }>
+        <source src='/static/videos/video.mp4'></video>
+    <div class="infoblock">
+        <img id='myFan' class='qr' src='/static/images/qr.gif'>
+        <br>
+        <div class="text">
+            Отсканируйте код, войдите в телеграмм бота
+        </div>
+    </div>
+</body>
+
+<script>
+    turn = 0
+    setInterval(
+        function turnFan(turn) {
+            let x = document.getElementById("myFan");
+            turn += 20
+            console.log('hehe')
+            x.style.transform = "rotate(" + (turn % 360) + "deg)"
+        }, 500)
+</script>
+
+</html>
